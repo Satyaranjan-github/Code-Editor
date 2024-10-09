@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Editor</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+.code-editor-container {
+  width: 100%;
+  height: 70%;
+  background-color: black;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+  overflow: auto;
+}
+.code-editor {
+  width: 450px;
+  height: 450px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  box-shadow: 0 0 10px white;
+  overflow: auto;
+}
+.html-editor {
+  border: 5px solid transparent;
+  animation: border-animation 3s infinite;
+}
+@keyframes border-animation {
+  0% {
+    border-color: red;
+  }
+  50% {
+    border-color: yellow;
+  }
+  100% {
+    border-color: blue;
+  }
+}
+.css-editor {
+  border: 5px solid transparent;
+  animation: border-animationn 3s infinite;
+}
+@keyframes border-animationn {
+  0% {
+    border-color: rgb(255, 221, 0);
+  }
+  50% {
+    border-color: blue;
+  }
+  100% {
+    border-color: rgb(255, 0, 0);
+  }
+}
+.js-editor {
+  border: 5px solid transparent;
+  animation: border-animation 3s infinite;
+}
+@keyframes border-animation {
+  0% {
+    border-color: blue;
+  }
+  50% {
+    border-color: red;
+  }
+  100% {
+    border-color: rgb(254, 191, 17);
+  }
+}
+
+.head-editor {
+  width: 100%;
+  height: 60px;
+  box-shadow: 2px 4px 10px rgb(155, 133, 133);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.left-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.right-head img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.right-head img:hover {
+  cursor: pointer;
+  scale: 1.2;
+}
+
+.code-editor textarea {
+  width: 100%;
+  height: calc(100% - 70px);
+  border: none;
+  background-color: transparent;
+  color: white;
+  padding: 20px;
+  outline: none;
+  resize: none;
+  font-size: 20px;
+}
+
+
+/* output Container */
+.output-container {
+    width: 100%;
+    height: 30%;
+    box-shadow: 2px 4px 10px rgb(255, 248, 248);
+    z-index: 1;
+    position: fixed;
+    bottom: 0;
+    transition: all 0.6s;
+}
+.output-head {
+    width: 100%;
+    height: 60px;
+    box-shadow: 2px 4px 10px rgb(17, 15, 15);
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: black;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    gap: 20px;
+}
+
+
+.output-head img:hover {
+    cursor: pointer;
+    scale: 1.2;
+}
+
+#output {
+    width: 100%;
+    height: calc(100% - 60px);
+    background-color: white;
+    overflow: auto;
+}
+
+
+.output-full{
+    height: 100%;
+}
+
+
+
+
+    </style>
+  </head> -->
+  <body>
+
+
+    <!-- Toast -->
+
+<div class="toast-container">
+  <div id="customToast" class="toast">
+    <div class="toast-body">
+    </div>
+    <button class="toast-close" onclick="closeToast()">×</button>
+  </div>
+</div>
+
+
+
+    <!-- Code Editor -->
+    <div class="code-editor-container">
+      <div class="code-editor html-editor">
+        <div class="head-editor">
+          <div class="left-head">
+            <img src="html.png" alt="" width="30px" />
+            <span>HTML</span>
+          </div>
+          <div class="right-head" >
+            <img src="copy.png" alt="" class="copy html-copy" />
+          </div>
+        </div>
+        <textarea  class="html-input" spellcheck="false"></textarea>
+      </div>
+      <div class="code-editor css-editor">
+        <div class="head-editor">
+          <div class="left-head">
+            <img src="css.png" alt="" width="30px" />
+            <span>CSS</span>
+          </div>
+          <div class="right-head">
+            <img src="copy.png" alt="" class="copy css-copy" />
+          </div>
+        </div>
+        <textarea  class="hcss-input" spellcheck="false"></textarea>
+      </div>
+      <div class="code-editor js-editor">
+        <div class="head-editor">
+          <div class="left-head">
+            <img src="js.png" alt="" width="30px" />
+            <span>Javascript</span>
+          </div>
+          <div class="right-head">
+            <img src="copy.png" alt="" class="copy js-copy" />
+          </div>
+        </div>
+        <textarea  class="js-input" spellcheck="false"></textarea>    
+      </div>
+    </div>
+
+
+    <!-- Output -->
+<div class="output-container">
+    <div class="output-head">
+        <span>Output</span>
+        <img src="save.png" alt="" width="30px"  id="save">
+        <img src="fulscreen.png" alt="" width="30px" id="full">
+    </div>
+
+    <iframe id="output"></iframe>
+</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
