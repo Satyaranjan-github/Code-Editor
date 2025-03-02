@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Editor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Toast -->
+
+    <div class="toast-container">
+      <div id="customToast" class="toast">
+        <div class="toast-body"></div>
+        <button class="toast-close" onclick="closeToast()">×</button>
+      </div>
+    </div>
+
+    <!-- Code Editor -->
+    <div class="code-editor-container">
+      <div class="code-editor html-editor">
+        <div class="head-editor">
+          <div class="left-head">
+            <img src="html.png" alt="" width="30px" />
+            <span>HTML</span>
+          </div>
+          <div class="right-head">
+            <img src="copy.png" alt="" class="copy html-copy" />
+          </div>
+        </div>
+        <textarea class="html-input" spellcheck="false"></textarea>
+      </div>
+      <div class="code-editor css-editor">
+        <div class="head-editor">
+          <div class="left-head">
+            <img src="css.png" alt="" width="30px" />
+            <span>CSS</span>
+          </div>
+          <div class="right-head">
+            <img src="copy.png" alt="" class="copy css-copy" />
+          </div>
+        </div>
+        <textarea class="hcss-input" spellcheck="false"></textarea>
+      </div>
+      <div class="code-editor js-editor">
+        <div class="head-editor">
+          <div class="left-head">
+            <img src="js.png" alt="" width="30px" />
+            <span>Javascript</span>
+          </div>
+          <div class="right-head">
+            <img src="copy.png" alt="" class="copy js-copy" />
+          </div>
+        </div>
+        <textarea class="js-input" spellcheck="false"></textarea>
+      </div>
+    </div>
+
+    <!-- Output -->
+    <div class="output-container">
+      <div class="output-head">
+        <span>Output</span>
+        <img src="save.png" alt="" width="30px" id="save" />
+        <img src="fulscreen.png" alt="" width="30px" id="full" />
+      </div>
+
+      <iframe id="output"></iframe>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
