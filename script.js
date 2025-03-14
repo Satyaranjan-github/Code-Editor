@@ -18,12 +18,6 @@ document.addEventListener("keydown", (e) => {
   full.addEventListener("click", () => {
     outputContainer.classList.toggle("output-full");
   });
-
-  //   if (e.key === "c") {
-  //     output.contentDocument.body.innerHTML = "";
-  //     output.contentDocument.head.innerHTML ="";
-  //     output.contentWindow.eval(jsInput.value);
-  //   }
 });
 save.addEventListener("click", () => {
   output.contentDocument.body.innerHTML = htmlInput.value;
