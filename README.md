@@ -1,8 +1,8 @@
-|# Code Editor ✍️  
-|
-|A **simple and lightweight** online **Code Editor** built using **HTML, CSS, and JavaScript**. It allows users to write and execute **HTML, CSS, and JavaScript** code in real-time.  
-|
-|s---
+# Code Editor ✍️  
+
+A **simple and lightweight** online **Code Editor** built using **HTML, CSS, and JavaScript**. It allows users to write and execute **HTML, CSS, and JavaScript** code in real-time.  
+
+s---
 
 ## 🚀 Features  
 - ✅ Live Preview of HTML, CSS, and JavaScript  
