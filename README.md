@@ -33,4 +33,3 @@ A **simple and lightweight** online **Code Editor** built using **HTML, CSS, and
 - 🔲 **Improved UI Design** for better user experience  
 - 🔲 **Dark/Light Mode Toggle**  
 - 🔲 **Customizable Themes** for code editor  
-  
